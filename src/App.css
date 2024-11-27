@@ -1,0 +1,150 @@
+/* Variables globales */
+:root {
+  background-color: black;
+  --aqua-color: aqua;
+  --red-color: red;
+  --hover-color: blueviolet;
+  --font-color: white;
+}
+
+/* Estilo general del cuerpo */
+body {
+  margin: 20px auto;
+  padding: 20px;
+  background-color: rgb(44, 44, 44);
+  width: 100%; /* Expande el cuerpo al ancho completo */
+  min-height: 100vh; /* Asegura que ocupe toda la altura de la pantalla */
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Títulos */
+h1 {
+  text-align: center;
+  color: var(--font-color);
+}
+
+/* Contenedor principal */
+.contenedorP {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  border-radius: 5%;
+}
+
+/* Contenedores */
+.contenedor {
+  background-color: var(--aqua-color);
+  display: flex;
+  justify-content: center; 
+  background-color: aqua; 
+  border-radius: 20px;
+  margin: 20px auto; 
+  padding: 10px;
+  flex-wrap: wrap;
+}
+
+.contenedor2 {
+  background-color: var(--red-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+  background-color: red; 
+  border-radius: 20px;
+  margin: 20px auto; 
+  padding: 10px;
+  flex-wrap: wrap;
+}
+
+/* Contenido dentro de los contenedores */
+.contenido {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+/* Botones */
+button {
+  background-color: transparent;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--hover-color);
+}
+
+/* Imágenes dentro de los botones */
+.img {
+  width: auto;
+  height: 100px;
+  margin: 10px;
+}
+
+button img {
+  display: block;
+  margin: 0 auto;
+}
+
+button span {
+  display: block;
+  margin-top: 5px;
+}
+
+/* Resultados */
+#result {
+  font-size: 18px;
+  margin-top: 20px;
+  color: var(--font-color);
+}
+
+#Pscore,
+#Cscore {
+  font-size: 20px;
+  color: var(--font-color);
+}
+
+/* Responsividad */
+@media screen and (min-width: 1280px) {
+  :root {
+      background-color: black;
+  }
+}
+
+@media screen and (min-width: 640px) and (max-width: 1279px) {
+  :root {
+      background-color: purple;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  :root {
+      background-color: blue;
+  }
+
+  .contenedorP {
+      flex-direction: column;
+  }
+
+  .contenedor,
+  .contenedor2 {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .contenido {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  button {
+      width: 100%;
+      margin: 10px 0;
+  }
+}
